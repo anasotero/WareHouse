@@ -21,34 +21,14 @@ public class TelaGraficoPizza extends AppCompatActivity {
 
         PieChart pieChart = findViewById(R.id.pieChart);
 
-        // Recuperando o ArrayList de strings
-        ArrayList<String> listaProdutos = getIntent().getStringArrayListExtra("listaProdutos");
-
-        // Lista de entradas para o gráfico
         List<PieEntry> entries = new ArrayList<>();
 
-        if (listaProdutos != null && !listaProdutos.isEmpty()) {
-            for (String produto : listaProdutos) {
-                try {
-                    // Exemplo de string: "Nome: Produto1, Quantidade: 5, Valor: R$ 10.0"
-                    String[] partes = produto.split(", ");
+        entries.add(new PieEntry(1000, "Pasta de dente"));
+        entries.add(new PieEntry(2500, "Xampú"));
+        entries.add(new PieEntry(2200, "Condicionador"));
+        entries.add(new PieEntry(500, "Sabonete"));
+        entries.add(new PieEntry(3100, "Enxaguante bucal"));
 
-                    // Extraindo o nome
-                    String nome = partes[0].split(": ")[1];
-
-                    // Extraindo o valor
-                    String valorString = partes[2].split(": ")[1].replace("R$ ", "").replace(",", ".");
-                    float valor = Float.parseFloat(valorString);
-
-                    // Adicionando entrada ao gráfico
-                    entries.add(new PieEntry(valor, nome));
-                } catch (Exception e) {
-                    e.printStackTrace();  // Para depurar possíveis erros de parsing
-                }
-            }
-        }
-
-        // Configurando o conjunto de dados do gráfico
         PieDataSet dataSet = new PieDataSet(entries, "Produtos");
         dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
 

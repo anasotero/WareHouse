@@ -15,6 +15,10 @@
 
         <activity android:name=".TelaProjetos" />
         <activity android:name=".TelaProduto" />
+        <activity android:name=".TelaGraficoPizza" />
+        <activity android:name=".TelaGraficoBarras" />
+        <activity android:name=".TelaGraficoRosca" />
+        <activity android:name=".TelaGraficoLinhas" />
 
         <activity
             android:name=".TelaPrincipal"

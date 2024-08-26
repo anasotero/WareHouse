@@ -80,6 +80,24 @@ public class TelaProduto extends AppCompatActivity {
                 startActivity(intent);
             });
 
+            btnDonut.setOnClickListener(j -> {
+                Intent intent = new Intent(TelaProduto.this, TelaGraficoRosca.class);
+                intent.putStringArrayListExtra("listaProdutos", listaProdutos);
+                startActivity(intent);
+            });
+
+            btnBarras.setOnClickListener(j -> {
+                Intent intent = new Intent(TelaProduto.this, TelaGraficoBarras.class);
+                intent.putStringArrayListExtra("listaProdutos", listaProdutos);
+                startActivity(intent);
+            });
+
+            btnLinhas.setOnClickListener(j -> {
+                Intent intent = new Intent(TelaProduto.this, TelaGraficoLinhas.class);
+                intent.putStringArrayListExtra("listaProdutos", listaProdutos);
+                startActivity(intent);
+            });
+
 
         });
     }
