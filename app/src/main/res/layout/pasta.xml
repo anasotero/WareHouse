@@ -7,7 +7,7 @@
     android:background="@android:color/transparent">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+        android:id="@+id/cardPasta"
         android:layout_width="167dp"
         android:layout_height="161dp"
         app:cardBackgroundColor="@color/lilas_escuro"
@@ -43,5 +43,5 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cardPasta" />
 </androidx.constraintlayout.widget.ConstraintLayout>

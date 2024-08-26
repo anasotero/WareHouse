@@ -1,6 +1,7 @@
 package com.example.teste;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,16 @@ public class TelaProjetos extends AppCompatActivity {
 
                     LayoutInflater pastaInflater = getLayoutInflater();
                     View pastaView = pastaInflater.inflate(R.layout.pasta, null);
+
+                    CardView cardPasta = pastaView.findViewById(R.id.cardPasta);
+                    cardPasta.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            Intent intent = new Intent(TelaProjetos.this, TelaProduto.class);
+                            startActivity(intent);
+                        }
+                    });
 
                     TextView textNome = pastaView.findViewById(R.id.textNome);
                     textNome.setText(nomePasta);
